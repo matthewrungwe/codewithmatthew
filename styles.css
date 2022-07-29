@@ -25,6 +25,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6, strong {
     color: var(--mainText);
+    font-weight: 700;
 }
 
 p, li, span, label, input, textarea {
@@ -259,6 +260,37 @@ h6 { font-size: 16px;}
     right: -5px;
 }
 
+/* --- */
+.about-container {
+    width: 1200px;
+    margin: 0 auto; 
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 100px;
+}
+
+#skills {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+    /* padding: 10px 50px; */
+}
+
+.social-links {
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+#social-img {
+    width: 100%;
+}
+
 /* Greeting section end */
 
 /* Vewports under 1200px */
@@ -266,8 +298,13 @@ h6 { font-size: 16px;}
     .greeting-container {
         width: 95%;
     }
+
+    .about-container {
+        width: 95%;
+    }
 }
 
+/* Viewport under 800px */
 @media screen and (max-width: 800px) {
     .intro-wrapper {
         display: grid;
