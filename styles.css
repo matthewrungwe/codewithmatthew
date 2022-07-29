@@ -9,6 +9,11 @@
     --secondaryText: #4b5156;
 
     --themeDotBorder: #24292e;
+
+    --previewBg: rgba(251, 249, 243, 0.8);
+    --previewShadow: #f0ead6;
+
+    --lightBlue: #17a2b8;
 }
 /* Variables end */
 
@@ -131,8 +136,6 @@ h6 { font-size: 16px;}
     background-color: #2ACA3E;
 }
 
-/* --- */
-
 #navigation {
     margin: 0;
     padding: 10px;
@@ -142,6 +145,8 @@ h6 { font-size: 16px;}
     display: inline-block;
     margin-right: 5px;
 }
+
+/* --- */
 
 .left-column {
     grid-area: left-column;
@@ -195,19 +200,87 @@ h6 { font-size: 16px;}
 }
 
 #settings-note {
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     font-style: italic;
 }
 
+/* --- */
+
 .right-column {
     grid-area: right-column;
+    display: grid;
+    align-content: center;
 }
+
+#preview-shadow {
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#preview {
+    width: 300px;
+    height: 180px;
+    border: 1.5px solid var(--lightBlue);
+    background-color: var(--previewBg);
+    padding: 15px;
+    position: relative;
+}
+
+.corner {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    border: 1.5px solid var(--lightBlue);
+    background-color: #fff;
+    position: absolute;
+}
+
+#corner-tl {
+    top: -5px;
+    left: -5px;
+}
+
+#corner-tr {
+    top: -5px;
+    right: -5px;
+}
+
+#corner-bl {
+    bottom: -5px;
+    left: -5px;
+}
+
+#corner-br {
+    bottom: -5px;
+    right: -5px;
+}
+
 /* Greeting section end */
 
 /* Vewports under 1200px */
 @media screen and (max-width: 1200px) {
     .greeting-container {
         width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    }
+
+    .right-column {
+        justify-content: center;
+        padding-bottom: 50px;
     }
 }
