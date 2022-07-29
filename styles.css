@@ -23,11 +23,13 @@ h1, h2, h3, h4, h5, h6, strong {
 p, li, span, label, input, textarea {
     color: var(--secondaryText);
     font-family: monospace;
+    font-weight: 500;
 } 
 
 a {
     text-decoration: none;
     color: #17a2b8;
+    font-weight: 500;
 }
 
 ul {
@@ -92,6 +94,8 @@ h6 { font-size: 16px;}
 .nav-wrapper {
     grid-area: nav-wrapper;
     border-bottom: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+    background-color: var(--mainColor);
 
     display: flex;
     justify-content: space-between;
@@ -100,14 +104,40 @@ h6 { font-size: 16px;}
 
 .dots-wrapper {
     display: flex;
+    padding: 10px;
+}
+
+#dot-1 {
+    background-color: #FC6058;
+}
+
+#dot-2 {
+    background-color: #FEC02F;
+}
+
+#dot-3 {
+    background-color: #2ACA3E;
 }
 
 .browser-dot {
-    background-color: black;
     width: 15px;
     height: 15px;
     border-radius: 100%;
     margin: 0 3px;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+#navigation {
+    margin: 0;
+    padding: 10px;
+}
+
+#navigation li {
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .left-column {
