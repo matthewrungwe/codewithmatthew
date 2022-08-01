@@ -1,3 +1,13 @@
+// Saving the theme to Local Storage
+let theme = localStorage.getItem('theme');
+
+if(theme === null) {
+    setTheme('light');
+} else {
+    setTheme(theme);
+}
+// Local Storage end
+
 let themeDots = document.getElementsByClassName('theme-dot');
 
 for (let i = 0; themeDots.length > i; i++) {
