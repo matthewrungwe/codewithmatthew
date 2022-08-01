@@ -1,0 +1,19 @@
+/* Variables */
+:root {
+    --mainColor: #463448;
+    --secondaryColor: #382a3f;
+
+    --borderColor: #1d1520;
+
+    --mainText: #fff;
+    --secondaryText: #eee;
+
+    --themeDotBorder: #fff;
+
+    --previewBg: rgba(29, 21, 32, 0.8);
+    --previewShadow: #2b202f;
+
+    --lightBlue: #17a2b8;
+
+    --buttonColor: #8534a3;
+}
